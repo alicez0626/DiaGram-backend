@@ -29,7 +29,7 @@ function signup(req, res, next) {
             return userModel.save();
         })
         .then((userResult) => {
-            return AccessCode.deleteCode(code);
+            return AccessCode.deleteCode(code); /* Comment: Is the function send any status code if sign up succeeds? */
         })
         .then(() => {
             next(); //go to login

@@ -24,3 +24,10 @@ router.post('/signup', user.signup, session.login);
 router.post('/login', validator.userSignup, session.login);
 
 module.exports = router;
+
+/* comments:
+	Very clean code style.
+	Good thoughts on using jwt to verify the sender.
+
+	However, maybe considering using https to secure the data being transferred?
+*/
